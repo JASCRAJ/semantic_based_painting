@@ -122,7 +122,7 @@ def resize_segmentation_mask(mask, height, width):
     return resized_mask
 
 def map_segmentation_mask_to_colors(mask):
-    categories_json = '/home/manuelladron/projects/npp/stroke_opt_main/stroke_opt_23/utils/coco_panoptic_cat.json'
+    categories_json = '/content/semantic_based_painting/utils/coco_panoptic_cat.json'
     
     with open(categories_json) as f:
         categories = json.load(f)
@@ -252,7 +252,7 @@ def process_img(args, img_path, writer, style_img_path=None, resize_value=128, m
     segm_mask_color_with_boundaries = 0
     if args.use_segmentation_mask or args.use_segmentation_contours:
         
-        categories_json = '/home/manuelladron/projects/npp/stroke_opt_main/stroke_opt_23/utils/coco_panoptic_cat.json'
+        categories_json = '/content/semantic_based_painting/utils/coco_panoptic_cat.json'
         with open(categories_json) as f:
             categories = json.load(f)
         
