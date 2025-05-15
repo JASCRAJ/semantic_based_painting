@@ -37,7 +37,7 @@ class Painter():
     
         # Create dictionary that maps ids to names 
         if args.use_segmentation_mask:
-            categories_json = '/home/manuelladron/projects/npp/stroke_opt_main/stroke_opt_23/utils/coco_panoptic_cat.json'
+            categories_json = '/content/semantic_based_painting/utils/coco_panoptic_cat.json'
             with open(categories_json) as f:
                 categories = json.load(f)
             
