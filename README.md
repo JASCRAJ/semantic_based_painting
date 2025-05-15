@@ -44,6 +44,9 @@ The algorithm aims to efficiently optimize a collection of stroke parameters to 
 
 ## How To Use
 
+## colab notebook to run easily
+link:   https://colab.research.google.com/drive/1PLuxiMSQRLx51lsATYQsedTC-1awerTd?usp=sharing
+
 ### 1. Requirements:
 
 - Python 3.6 or later
