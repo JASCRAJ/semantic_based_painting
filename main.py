@@ -40,7 +40,7 @@ def create_parser():
     parser.add_argument('--image_path', type=str, default = 'images/paris2.jpeg') 
     
     parser.add_argument('--save_dir', type=str, default = './results')
-    parser.add_argument('--canvas_size', type=int, default=128)
+    parser.add_argument('--canvas_size', type=int, default=64)
     parser.add_argument('--canvas_color', type=str, default = 'black', choices=['back', 'white'])
 
     # Renderer settings 
