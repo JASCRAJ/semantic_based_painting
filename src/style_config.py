@@ -1,6 +1,6 @@
 style_parameters = {
     'realistic': {
-        'budgets': [9, 45, 64, 81],
+        'budgets': [9, 49, 64, 81],
         'number_natural_patches': [40, 60, 60],
         'patch_strategy_detail': 'uniform',
         'use_segmentation_mask': False,
