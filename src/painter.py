@@ -649,7 +649,7 @@ class Painter():
                     
                     animation_info[name] = this_mask
                     
-                    """
+                    
                     # Creating gif here
                     print('Creating animation...')
                     gif_dir = os.path.join(self.args.save_dir, 'gif', name)
@@ -664,7 +664,7 @@ class Painter():
                     utils.create_gif(gif_dir, output_file, fps=30)
 
                     print('....animation finished')
-                    """
+                    
                     
                     # Means there is at least one good stroke 
                     if successful:
@@ -1142,25 +1142,25 @@ class Painter():
                 torch.save(animation_info, fullname)
                 
                 # animation_info is a dictionary with key = name of mask, value = {'canvas': general_canvas_process.clone(), 'strokes': all_strokes_4_gif}
-                # print('Creating animation...')
-                # for name, v in animation_info.items():
+                print('Creating animation...')
+                for name, v in animation_info.items():
                     
-                #     canvas_gif = v['canvas']
-                #     strokes_and_locations = v['strokes']    
+                     canvas_gif = v['canvas']
+                     strokes_and_locations = v['strokes']    
 
-                #     # Creating gif here
-                #     print('name: ', name)
+                     # Creating gif here
+                     print('name: ', name)
                     
-                #     gif_dir = os.path.join(self.args.save_dir, 'gif', name)
-                #     os.makedirs(gif_dir, exist_ok=True)
+                     gif_dir = os.path.join(self.args.save_dir, 'gif', name)
+                     os.makedirs(gif_dir, exist_ok=True)
                     
-                #     utils.process_strokes_and_save(strokes_and_locations, canvas_gif, gif_dir, start_frame=0)
+                     utils.process_strokes_and_save(strokes_and_locations, canvas_gif, gif_dir, start_frame=0)
 
-                #     # Create gif 
-                #     output_file = os.path.join(gif_dir, f'{name}.gif')
-                #     utils.create_gif(gif_dir, output_file, fps=30)
+                     # Create gif 
+                     output_file = os.path.join(gif_dir, f'{name}.gif')
+                     utils.create_gif(gif_dir, output_file, fps=30)
                     
-                #     print(f'{name} ....animation finished')
+                     print(f'{name} ....animation finished')
 
         # Compute the final graphs 
         if mode != 'uniform' and self.args.compute_stroke_distribution:
