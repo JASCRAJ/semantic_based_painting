@@ -99,8 +99,8 @@ class Painter():
         self.segm_mask_color = int (actually is aspect ratio downsample, can't remember, probably just a placeholder)
         """
     
-        self.npatches_total = min(npatches_h,10) * min(npatches_w,10)
-        self.npatches_h, self.npatches_w  = min(10,npatches_h), min(10,npatches_w)
+        self.npatches_total = npatches_h * npatches_w
+        self.npatches_h, self.npatches_w  = npatches_h, npatches_w
         self.boundaries = None
         
         if self.args.use_segmentation_contours:
