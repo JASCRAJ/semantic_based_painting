@@ -52,7 +52,8 @@ def create_parser():
 
     # Stroke settings 
     parser.add_argument('--stroke_init_mode', type=str, default = 'grid', choices=['random', 'grid'])
-
+    parser.add_argument('--filter_strokes', type=bool, default=True)
+    
     # loss settings 
     parser.add_argument('--w_perc', type=float, default = 0)
 
