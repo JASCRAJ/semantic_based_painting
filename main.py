@@ -22,7 +22,7 @@ def create_parser():
     parser.add_argument('--texturize', type=bool, default = True)
     parser.add_argument('--use_transparency', type=bool, default = False)
 
-    parser.add_argument('--compute_stroke_distribution', type=bool, default = False)
+    parser.add_argument('--compute_stroke_distribution', type=bool, default = True)
     parser.add_argument('--save_animation', type=bool, default = True)
     
     # This is old and probably won't be used again 
